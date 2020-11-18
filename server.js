@@ -2,16 +2,16 @@ const Hapi = require('hapi');
 const mongoose = require('mongoose');
 
 const server = new Hapi.Server()
-
 server.connection({
     host: 'localhost',
     port: 3000
 })
 
-
+mongoose.connect('mongodb://mongo:27017/mongo_db', { useNewUrlParser: true })
+  .then(() => console.log('successfully connected to MongoDB'))
+  .catch(err => console.log(err));
 
 const Schema = mongoose.Schema;
-
 const ItemSchema = new Schema({
     name: {
       type: String,
