@@ -1,16 +1,22 @@
 import React from "react";
 
 function handleSubmit(event) {
-  //event.preventDefault();
-  console.log("hellow");
-  
-  fetch('https://api.spotify.com/v1/albums')
+  fetch('https://localhost/connection')
   .then(response => response.json())
   .then(data => console.log(data));
+  
+  event.preventDefault();
 }
 
-function handleClick() {
-  console.log('Click happened, yeii');
+function handleClick(event) {
+  fetch('https://localhost/add/dummy/data', {
+        method: 'POST',
+      }).then(function(response) {
+        console.log(response)
+        return response.json();
+      });
+  
+      event.preventDefault();
 }
 
 export default function App() { 
