@@ -1,0 +1,23 @@
+{
+    "name": "docker-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "react": "17.0.0",
+      "react-dom": "17.0.0",
+      "react-scripts": "3.4.3",
+      "hapi": "^16.1.0",
+      "mongoose": "^5.10.15"
+    },
+    "devDependencies": {
+      "typescript": "3.8.3"
+    }
+  }
+  
