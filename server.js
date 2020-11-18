@@ -5,8 +5,10 @@ const server = new Hapi.Server()
 
 server.connection({
     host: 'localhost',
-    port: 3011
+    port: 3000
 })
+
+
 
 const Schema = mongoose.Schema;
 
